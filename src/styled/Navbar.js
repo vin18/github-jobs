@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledNavbar = styled.nav`
-  background-color: ${(props) => props.theme.colors.bgNavbar};
-  color: ${(props) => props.theme.colors.cNavbar};
+  background-color: ${(props) => props.theme.colors.violet};
+  color: ${(props) => props.theme.colors.white};
   height: 15rem;
 
   display: flex;

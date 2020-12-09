@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledSearch = styled.div`
-  background-color: ${(props) => props.theme.colors.mainBase};
+  background-color: ${(props) => props.theme.colors.blueDark};
   padding: 2rem 1.5rem;
   border-radius: 0.5rem;
   transform: translateY(-5rem);
@@ -31,7 +31,7 @@ export const StyledSearchInput = styled.div`
     outline: none;
 
     &::placeholder {
-      color: ${(props) => props.theme.colors.searchColor};
+      color: ${(props) => props.theme.colors.gray};
     }
   }
 
@@ -39,7 +39,7 @@ export const StyledSearchInput = styled.div`
     font-size: 2.5rem;
     transform: translateX(3rem) translateY(-0.1rem);
     margin-right: 2rem;
-    color: ${(props) => props.theme.colors.button};
+    color: ${(props) => props.theme.colors.violet};
   }
 `;
 
@@ -60,7 +60,7 @@ export const StyledSearchLocation = styled.div`
     outline: none;
 
     &::placeholder {
-      color: ${(props) => props.theme.colors.searchColor};
+      color: ${(props) => props.theme.colors.gray};
     }
   }
 
@@ -68,7 +68,7 @@ export const StyledSearchLocation = styled.div`
     font-size: 2.5rem;
     transform: translateX(3rem) translateY(-0.1rem);
     margin-right: 2rem;
-    color: ${(props) => props.theme.colors.button};
+    color: ${(props) => props.theme.colors.violet};
   }
 `;
 
@@ -85,12 +85,12 @@ export const StyledSearchInfo = styled.div`
   p {
     font-size: 2rem;
     margin-right: auto;
-    color: ${(props) => props.theme.colors.cNavbar};
+    color: ${(props) => props.theme.colors.white};
     transform: translateY(0.25rem);
   }
 
   button {
-    background-color: ${(props) => props.theme.colors.button};
+    background-color: ${(props) => props.theme.colors.violet};
     border: none;
     border-radius: 0.5rem;
     color: #fff;
