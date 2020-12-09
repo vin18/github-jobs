@@ -1,4 +1,4 @@
-const violet = 'hsl(235, 60%, 61%)';
+const violet = '#5964e0';
 // const violetLight = 'hsl(235, 82%, 77%)';
 const blueDark = 'hsl(219, 29%, 14%)';
 const midnight = 'hsl(220, 29%, 10%)';
@@ -15,6 +15,7 @@ export const theme = {
   colors: {
     backgroundColor: midnight,
     mainBase: blueDark,
+    cNavbar: white,
     mainText: grayDark,
     heading: white,
     error: darkRed,
@@ -23,5 +24,6 @@ export const theme = {
     spinner: violet,
     border: midnight,
     backToTop: violet,
+    bgNavbar: violet,
   },
 };
