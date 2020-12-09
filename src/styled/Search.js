@@ -67,7 +67,7 @@ export const StyledSearchLocation = styled.div`
   i {
     font-size: 2.5rem;
     transform: translateX(3rem) translateY(-0.1rem);
-    margin-right: 2rem;
+    margin-right: 2.1rem;
     color: ${(props) => props.theme.colors.violet};
   }
 `;
@@ -97,5 +97,12 @@ export const StyledSearchInfo = styled.div`
     font-size: 2rem;
     padding: 1.5rem 5rem;
     font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    transition: all 300ms;
+
+    &:hover {
+      filter: brightness(125%);
+    }
   }
 `;
