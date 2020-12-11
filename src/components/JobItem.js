@@ -8,9 +8,9 @@ import {
   StyledCompany,
   StyledJobLocation,
   StyledDetailsButton,
-} from '../styled/UserItem';
+} from '../styled/JobItem';
 
-const UserItem = ({ job }) => {
+const JobItem = ({ job }) => {
   return (
     <StyledCard>
       <StyledWrapper>
@@ -31,4 +31,4 @@ const UserItem = ({ job }) => {
   );
 };
 
-export default UserItem;
+export default JobItem;

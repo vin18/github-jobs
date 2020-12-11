@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledUsers = styled.div`
+export const StyledJobs = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   gap: 2rem;

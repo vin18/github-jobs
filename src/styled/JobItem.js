@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledUserItem = styled.div``;
+export const StyledJobItem = styled.div``;
 
 export const StyledCard = styled.div`
   background-color: ${(props) => props.theme.colors.blueDark};

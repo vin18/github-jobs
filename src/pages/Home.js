@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Search from '../components/Search';
 import { StyledHome } from '../styled/Home';
 import { Container } from '../styled/Utils';
-import Users from '../components/Users';
+import Jobs from '../components/Jobs';
 
 const Home = ({ jobs, setText, setLocation, text, location }) => {
   return (
@@ -17,7 +17,7 @@ const Home = ({ jobs, setText, setLocation, text, location }) => {
           location={location}
         />
       </Container>
-      <Users jobs={jobs} />
+      <Jobs jobs={jobs} />
     </StyledHome>
   );
 };
