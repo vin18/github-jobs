@@ -10,24 +10,22 @@ import {
   StyledDetailsButton,
 } from '../styled/UserItem';
 
-const UserItem = ({ user }) => {
+const UserItem = ({ job }) => {
   return (
     <StyledCard>
       <StyledWrapper>
         <StyledPosted>5h ago</StyledPosted>
-        <StyledJobType>Full Time</StyledJobType>
+        <StyledJobType>{job.type}</StyledJobType>
       </StyledWrapper>
 
-      <StyledJobTitle>Senior Software Engineer</StyledJobTitle>
+      <StyledJobTitle>{job.title}</StyledJobTitle>
 
-      <StyledCompany>So Digital Inc</StyledCompany>
+      <StyledCompany>{job.company}</StyledCompany>
 
-      <StyledJobLocation>
-        Remote, Seoul, Tokyo, Mountain View, San Fransisco
-      </StyledJobLocation>
+      <StyledJobLocation>{job.location}</StyledJobLocation>
 
       <StyledDetailsButton href='#'>
-        <i class='fas fa-info-circle'></i> View Details
+        <i className='fas fa-info-circle'></i> View Details
       </StyledDetailsButton>
     </StyledCard>
   );

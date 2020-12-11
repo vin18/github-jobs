@@ -57,12 +57,12 @@ const users = [
   },
 ];
 
-const Users = () => {
+const Users = ({ jobs }) => {
   return (
     <Container>
       <StyledUsers>
-        {users.map((user) => (
-          <UserItem key={user.id} user={user} />
+        {jobs.map((job) => (
+          <UserItem key={job.id} job={job} />
         ))}
       </StyledUsers>
     </Container>

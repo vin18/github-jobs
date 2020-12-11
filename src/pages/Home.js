@@ -5,14 +5,19 @@ import { StyledHome } from '../styled/Home';
 import { Container } from '../styled/Utils';
 import Users from '../components/Users';
 
-const Home = () => {
+const Home = ({ jobs, setText, setLocation, text, location }) => {
   return (
     <StyledHome>
       <Navbar />
       <Container>
-        <Search />
+        <Search
+          setText={setText}
+          setLocation={setLocation}
+          text={text}
+          location={location}
+        />
       </Container>
-      <Users />
+      <Users jobs={jobs} />
     </StyledHome>
   );
 };

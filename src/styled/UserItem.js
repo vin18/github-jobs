@@ -6,7 +6,7 @@ export const StyledCard = styled.div`
   background-color: ${(props) => props.theme.colors.blueDark};
   margin-bottom: 2rem;
   padding: 3rem;
-  height: 26rem;
+  min-height: 26rem;
   border-radius: 0.5rem;
   box-shadow: ${(props) => props.theme.colors.boxShadowDark};
   position: relative;
