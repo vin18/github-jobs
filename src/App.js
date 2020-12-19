@@ -4,6 +4,12 @@ import Home from './pages/Home';
 import { Global } from './styled/Global';
 import { theme } from './styled/Theme';
 import axios from 'axios';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import Job from './pages/Job';
 
 const App = () => {
   const [jobs, setJobs] = useState([]);
@@ -23,16 +29,26 @@ const App = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Global />
-      <Home
-        jobs={jobs}
-        setText={setText}
-        setLocation={setLocation}
-        text={text}
-        location={location}
-      />
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <Global />
+        <Switch>
+          <Route path='/' exact>
+            <Home
+              jobs={jobs}
+              setText={setText}
+              setLocation={setLocation}
+              text={text}
+              location={location}
+            />
+          </Route>
+
+          <Route path='/job/:jobId' exact>
+            <Job />
+          </Route>
+        </Switch>
+      </ThemeProvider>
+    </Router>
   );
 };
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const StyledJobItem = styled.div``;
 
@@ -45,7 +46,7 @@ export const StyledJobLocation = styled.p`
   font-weight: 600;
 `;
 
-export const StyledDetailsButton = styled.a`
+export const StyledDetailsButton = styled(Link)`
   color: ${(props) => props.theme.colors.violet};
   text-decoration: none;
   padding: 2rem;

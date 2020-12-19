@@ -10,7 +10,7 @@ import {
   StyledDetailsButton,
 } from '../styled/JobItem';
 
-const JobItem = ({ job }) => {
+const JobItem = ({ job, history }) => {
   return (
     <StyledCard>
       <StyledWrapper>
@@ -24,7 +24,7 @@ const JobItem = ({ job }) => {
 
       <StyledJobLocation>{job.location}</StyledJobLocation>
 
-      <StyledDetailsButton href='#'>
+      <StyledDetailsButton to={`/job/${job.id}`}>
         <i className='fas fa-info-circle'></i> View Details
       </StyledDetailsButton>
     </StyledCard>
