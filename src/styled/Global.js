@@ -12,6 +12,10 @@ export const Global = createGlobalStyle`
   html {
     font-size: 62.5%;
     box-sizing: border-box;
+
+    @media (max-width: 48rem) {
+      font-size: 38%;
+    }
   }
 
   body {
@@ -22,5 +26,7 @@ export const Global = createGlobalStyle`
     width: 100vw;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
+
+ 
   }
 `;

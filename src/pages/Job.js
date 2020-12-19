@@ -23,8 +23,8 @@ import jobData from './jobData';
 const Job = () => {
   const location = useLocation();
   const jobId = location.pathname.split('/')[2];
-  const [job, setJob] = useState(jobData[0]);
-  // const [job, setJob] = useState({});
+  // const [job, setJob] = useState(jobData[0]);
+  const [job, setJob] = useState({});
 
   const {
     company_logo,
@@ -48,7 +48,7 @@ const Job = () => {
       console.log(JSON.parse(response.data.contents));
     }
 
-    // fetchMovie();
+    fetchMovie();
   }, [jobId]);
 
   return (

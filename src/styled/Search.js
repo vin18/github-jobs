@@ -70,6 +70,10 @@ export const StyledSearchLocation = styled.div`
     margin-right: 2.1rem;
     color: ${(props) => props.theme.colors.violet};
   }
+
+  @media (max-width: 78rem) {
+    display: none;
+  }
 `;
 
 export const StyledSearchInfo = styled.div`
@@ -89,20 +93,28 @@ export const StyledSearchInfo = styled.div`
     transform: translateY(0.25rem);
   }
 
-  button {
-    background-color: ${(props) => props.theme.colors.violet};
-    border: none;
-    border-radius: 0.5rem;
-    color: #fff;
-    font-size: 2rem;
-    padding: 1.5rem 5rem;
-    font-weight: 700;
-    outline: none;
-    cursor: pointer;
-    transition: all 300ms;
+  @media (max-width: 78rem) {
+    display: none;
 
-    &:hover {
-      filter: brightness(125%);
+    button {
+      display: block;
     }
+  }
+`;
+
+export const StyledButton = styled.button`
+  background-color: ${(props) => props.theme.colors.violet};
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.5rem 5rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  transition: all 300ms;
+
+  &:hover {
+    filter: brightness(125%);
   }
 `;

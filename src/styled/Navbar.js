@@ -18,4 +18,9 @@ export const StyledNavbar = styled.nav`
     top: 4rem;
     transform: translateY(-1rem);
   }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 `;

@@ -5,6 +5,7 @@ import {
   StyledSearchInput,
   StyledSearchLocation,
   StyledSearchInfo,
+  StyledButton,
 } from '../styled/Search';
 
 const Search = ({ setText, setLocation, text, location }) => {
@@ -39,9 +40,8 @@ const Search = ({ setText, setLocation, text, location }) => {
         <StyledSearchInfo>
           <input type='checkbox' />
           <p>Full Time Only</p>
-
-          <button>Search</button>
         </StyledSearchInfo>
+        <StyledButton>Search</StyledButton>
       </StyledForm>
     </StyledSearch>
   );

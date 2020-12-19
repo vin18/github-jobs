@@ -5,12 +5,20 @@ export const StyledJob = styled.div`
   margin: 0 auto;
   position: relative;
   padding-bottom: 5rem;
+
+  @media (max-width: 78rem) {
+    max-width: 80rem;
+  }
+
+  @media (max-width: 48rem) {
+    max-width: 48rem;
+  }
 `;
 
 export const StyledJobHeader = styled.div`
   display: flex;
   align-items: center;
-  min-height: 10rem;
+  min-height: 15rem;
   border-radius: 1rem;
   background-color: ${(props) => props.theme.colors.blueDark};
   transform: translateY(-4rem);
@@ -18,8 +26,12 @@ export const StyledJobHeader = styled.div`
 
 export const StyledImg = styled.img`
   width: 20rem;
-  height: 100%;
   border-radius: 1rem 0 0 1rem;
+  align-self: stretch;
+
+  @media (max-width: 48rem) {
+    display: none;
+  }
 `;
 
 export const StyledCompany = styled.div`
@@ -35,6 +47,11 @@ export const StyledCompanyName = styled.h1`
   transform: translateX(-10rem) translateY(-2rem);
   font-size: 4.5rem;
   margin-bottom: 2rem;
+  margin-top: 4rem;
+
+  @media (max-width: 48rem) {
+    margin-left: 15rem;
+  }
 `;
 
 export const StyledCompanySite = styled.a`
@@ -50,6 +67,10 @@ export const StyledCompanySite = styled.a`
   bottom: 3rem;
   right: 3rem;
   transform: all 300ms;
+
+  @media (max-width: 48rem) {
+    display: none;
+  }
 
   &:hover {
     cursor: pointer;
@@ -104,6 +125,10 @@ export const StyledButton = styled.a`
 
   &:hover {
     filter: brightness(125%);
+  }
+
+  @media (max-width: 48rem) {
+    display: none;
   }
 `;
 
