@@ -18,12 +18,10 @@ import {
   StyledApply,
 } from '../styled/Job';
 import Navbar from '../components/Navbar';
-import jobData from './jobData';
 
 const Job = () => {
   const location = useLocation();
   const jobId = location.pathname.split('/')[2];
-  // const [job, setJob] = useState(jobData[0]);
   const [job, setJob] = useState({});
 
   const {
@@ -38,17 +36,16 @@ const Job = () => {
   } = job;
 
   useEffect(() => {
-    async function fetchMovie() {
+    async function fetchJob() {
       const response = await axios.get(
         `https://api.allorigins.win/get?url=${encodeURIComponent(
           `https://jobs.github.com/positions/${jobId}.json`
         )}`
       );
       setJob(JSON.parse(response.data.contents));
-      console.log(JSON.parse(response.data.contents));
     }
 
-    fetchMovie();
+    fetchJob();
   }, [jobId]);
 
   return (

@@ -13,20 +13,28 @@ import Job from './pages/Job';
 
 const App = () => {
   const [jobs, setJobs] = useState([]);
-  const [location, setLocation] = useState('');
   const [text, setText] = useState('');
 
   useEffect(() => {
     async function fetchJobs() {
       const response = await axios.get(
         `https://api.allorigins.win/get?url=${encodeURIComponent(
-          `https://jobs.github.com/positions.json?&description=${text}&location=${location}`
+          `https://jobs.github.com/positions.json?&description=${text}`
         )}`
       );
       setJobs(JSON.parse(response.data.contents));
+      console.log(JSON.parse(response.data.contents));
     }
     fetchJobs();
   }, []);
+
+  const handleSearch = (text) => {
+    const filteredJobs = jobs.filter((job) =>
+      job.company.toLowerCase().trim().includes(text.toLowerCase())
+    );
+    console.log(filteredJobs);
+    setJobs(filteredJobs);
+  };
 
   return (
     <Router>
@@ -37,9 +45,8 @@ const App = () => {
             <Home
               jobs={jobs}
               setText={setText}
-              setLocation={setLocation}
               text={text}
-              location={location}
+              handleSearch={handleSearch}
             />
           </Route>
 
